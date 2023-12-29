@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Room Details</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0px;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .room-container {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        background: #f2f2f2;
+        border-radius: 8px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .room-table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      .room-table th,
+      .room-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+        width: 5px;
+      }
+
+      .sub-heading {
+        font-size: 18px;
+      }
+
+      .room-table th {
+        font-size: 22px;
+        color: #883d1a;
+        background-color: #f2f2f2;
+      }
+
+      .room-table td {
+        background-color: #fff;
+      }
+
+      .room-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .room-photo {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .room-photo img {
+        max-width: 350px;
+        height: 100%;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
+
+      .more-photos img {
+        width: 48%;
+        margin-right: 2%;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="room-container">
+      <table class="room-table">
+        <thead>
+          <tr>
+            <th colspan="2">Basic Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!--<td class="sub-heading">Room Photo</td>-->
+            <td class="room-photo">
+              <img src="../images/img1.jpg" alt="Room Image" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Room Title</td>
+            <td>{{Room Title}}</td>
+          </tr>
+          <tr>
+            <td>Room Location</td>
+            <td>{{Room Location}}</td>
+          </tr>
+          <tr>
+            <td>Price</td>
+            <td>{{Price}}</td>
+          </tr>
+          <tr>
+            <td>Price Negotiable</td>
+            <td>checkbox</td>
+          </tr>
+          <tr>
+            <td>Room Area</td>
+            <td>{{Room Area}}</td>
+          </tr>
+          <tr>
+            <td>Room Type</td>
+            <td>checkbox</td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th colspan="2">Other Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Checkbox 1</td>
+            <td>checkbox1</td>
+          </tr>
+          <tr>
+            <td>Checkbox 2</td>
+            <td>checkbox2</td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th colspan="2">Additional Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Additional Details</td>
+            <td>Textarea</td>
+          </tr>
+          <tr>
+            <td class="sub-heading">More Room Photo</td>
+            <td>
+              <div class="more-photos">
+                <img src="{{Photo 1}}" alt="Additional Room Photo 1" />
+                <img src="{{Photo 2}}" alt="Additional Room Photo 2" />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th colspan="2">User Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Contact Number</td>
+            <td>{{Contact Number}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
