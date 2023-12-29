@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rentflex home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--------------css link---------->
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <!--------------navbar---------->
+    <nav>
+      <div class="logo">
+        <a href="#"><img src="images/logo.png" alt="logo" width="100vh" /></a>
+      </div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Post room</a></li>
+        <li><a href="#">Rent room</a></li>
+        <li>
+          <a href="#"><i class="fas fa-user"></i> Login</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-------------room section------------->
+    <section class="hero-section">
+      <div class="hero">
+        <h2 style="font-size: 3.2rem">Rentflex</h2>
+        <p>Find your perfect room to rent.</p>
+      </div>
+    </section>
+    <!--searchsection-->
+    <section class="section-search">
+      <div class="search-container">
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Enter location" />
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" placeholder="Enter price" />
+
+        <button onclick="search()"><i class="uil uil-search"></i></button>
+      </div>
+      <!-- Results will be displayed here -->
+      <div id="results-container"></div>
+    </section>
+
+    <!-------------About us section section------------->
+    <section class="about-us-container">
+      <div class="about-us-content">
+        <div class="image-slider"></div>
+        <div class="about-description">
+          <h1>About us</h1>
+          <h2>Welcome to Rentflex</h2>
+          <p>
+            Rentflex is your go-to platform for hassle-free and secure online
+            room rental. Our mission is to connect tenants with their ideal
+            living spaces, making the renting process simple and efficient.
+          </p>
+          <div class="read-more-btn">
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------room section------------->
+    <section class="room-section" id="rooms">
+      <div class="heading">
+        <h2>Featured Rooms</h2>
+      </div>
+      <div class="room-list">
+        <div class="room-item">
+          <img class="room-image" src="images/img1.jpg" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Cozy Room</div>
+            <div class="room-description">
+              A comfortable space for your stay.
+            </div>
+            <div class="room-location">
+              <i class="uil uil-location-point"></i>Kotihawa
+            </div>
+            <div class="room-price">Rs.4000 per month</div>
+          </div>
+          <div class="view-details-btn">
+            <a href="#">View Details</a>
+          </div>
+        </div>
+
+        <div class="room-item">
+          <img class="room-image" src="images/img2.jpg" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Spaceous Room</div>
+            <div class="room-description">
+              A comfortable space for your stay.
+            </div>
+            <div class="room-location">
+              <i class="uil uil-location-point"></i>Butwal
+            </div>
+            <div class="room-price">Rs.5000 per month</div>
+          </div>
+          <div class="view-details-btn">
+            <a href="#">View Details</a>
+          </div>
+        </div>
+
+        <div class="room-item">
+          <img class="room-image" src="images/img3.png" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Normal Room</div>
+            <div class="room-description">
+              A comfortable space for your stay.
+            </div>
+            <div class="room-location">
+              <i class="uil uil-location-point"></i>Bhalwari
+            </div>
+            <div class="room-price">Rs.3500 per month</div>
+          </div>
+
+          <div class="view-details-btn">
+            <a href="#">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------All rooms----------->
+    <section class="room-section2" id="all-rooms">
+      <div class="heading">
+        <h2>All Rooms</h2>
+      </div>
+      <div class="room-list">
+        <div class="room-item">
+          <img class="room-image" src="images/img1.jpg" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Cozy Room</div>
+            <div class="room-description">
+              A comfortable space for your stay.
+            </div>
+            <div class="room-location">
+              <i class="uil uil-location-point"></i>Kotihawa
+            </div>
+            <div class="room-price">Rs.4000 per month</div>
+          </div>
+          <div class="view-details-btn">
+            <a href="#">View Details</a>
+          </div>
+        </div>
+
+        <div class="room-item">
+          <img class="room-image" src="images/img2.jpg" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Spaceous Room</div>
+            <div class="room-description">
+              A comfortable space for your stay.
+            </div>
+            <div class="room-location">
+              <i class="uil uil-location-point"></i>Butwal
+            </div>
+            <div class="room-price">Rs.5000 per month</div>
+          </div>
+          <div class="view-details-btn">
+            <a href="#">View Details</a>
+          </div>
+        </div>
+
+        <div class="room-item">
+          <img class="room-image" src="images/img3.png" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Normal Room</div>
+            <div class="room-description">
+              A comfortable space for your stay.
+            </div>
+            <div class="room-location">
+              <i class="uil uil-location-point"></i>Bhalwari
+            </div>
+            <div class="room-price">Rs.3500 per month</div>
+          </div>
+          <div class="view-details-btn">
+            <a href="#">View Details</a>
+          </div>
+        </div>
+
+        <div class="room-item">
+          <img class="room-image" src="images/img4.png" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Room 4</div>
+            <div class="room-description">
+              A comfortable space for your stay.
+            </div>
+            <div class="room-location">
+              <i class="uil uil-location-point"></i>Kalikanagar
+            </div>
+            <div class="room-price">Rs.5500 per month</div>
+          </div>
+          <div class="view-details-btn">
+            <a href="#">View Details</a>
+          </div>
+        </div>
+
+        <div class="room-item">
+          <img class="room-image" src="images/img5.png" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Room 5</div>
+            <div class="room-description">
+              A comfortable space for your stay.
+            </div>
+            <div class="room-location">
+              <i class="uil uil-location-point"></i>Bhalwari
+            </div>
+            <div class="room-price">Rs.4500 per month</div>
+          </div>
+          <div class="view-details-btn">
+            <a href="#">View Details</a>
+          </div>
+        </div>
+        <div class="room-item">
+          <img class="room-image" src="images/5.jpg" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Room 6</div>
+            <div class="room-description">
+              A comfortable space for your stay.
+            </div>
+            <div class="room-location">
+              <i class="uil uil-location-point"></i>Yogikuti
+            </div>
+            <div class="room-price">Rs.3500 per month</div>
+          </div>
+          <div class="view-details-btn">
+            <a href="#">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------footer---------------->
+    <footer class="footer-links">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+
+      <div class="copyright">
+        <p>&copy;2023 Rentflex</p>
+      </div>
+    </footer>
+
+    <!---------------JS link---------------->
+    <script src="../JS/script.js"></script>
+  </body>
+</html>

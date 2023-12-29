@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>addroom Form</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/addroomform..css" />
+    <style>
+        
+    </style>
+  </head>
+  <body>
+    <section class="post-room">
+    <form method="post" action="#">
+      <h1 class="heading">Add room</h1>
+      <p>Enter your details for room listings.</p>
+      <div class="content">
+        <h3>Basic Details:</h3>
+        <div class="sub-content">
+  <div class="input-group">
+    <label for="Room Title" class="form-level">Room Title:</label>
+    <input type="text" name="title" class="box" placeholder="Room for rent" required />
+  </div>
+
+  <div class="input-group">
+    <label for="Room Location" class="form-level">Room Location:</label>
+    <input type="text" name="location" class="box" placeholder="Tilottama-7, Bhalwari" required />
+  </div>
+</div>
+
+        <div class="sub-content">
+            <div class="input-group">
+        <label for ="Price"class="form-level">Price:</label>
+        <input type="number" name="Price" class="box"placeholder="3000" step="100" required />
+</div>
+<div class="input-group-checkbox">
+         <label for ="Price Negotiable"class="form-level">Price Negotiable:</label>
+         <input type="checkbox" name="Yes" value="Yes"/> Yes
+         <input type="checkbox" name="No" value="No"/>No
+          </div>
+          </div>
+
+        <div class="sub-content">
+            <div class="input-group">
+        <label for="Room Area"class="form-level">Room Area:</label>
+              <input type="text" name="room-area" class="box"placeholder="eg.120 sq.ft" required/>
+</div>
+<div class="input-group-checkbox">
+         <label for="Room Type"class="form-level">Room Type:</label>
+              <input type="checkbox" name="Large" value="Large" />Large
+              <input type="checkbox" name="Medium" value="Medium" />Medium
+              <input type="checkbox" name="Small" value="Small" />Small
+        </div>
+        </div>
+
+<div class="subcontent">
+    <div class="input-group">
+       <label for="Room Photo"class="form-level">Room Photo:</label>
+      <input type="file" name="photo" required />
+      </div>
+      <div class="input-group">
+       <label for=" More room photos" class="form-level">More room photos:</label>
+          <div class="photo-upload">
+            <input type="file" name="photo1" />
+            <input type="file" name="photo2" />
+          </div>
+         </div>
+        </div>
+          
+
+      <div class="content">
+        <h3>Others Details:</h3>
+        <div class="sub-content">
+        <label class="form-level">Room Facilities:</label>
+        <label><input type="checkbox" name="Attached bathroom" value=" bathroom" /> Attached bathroom </label>
+        <label><input type="checkbox" name="Attached kitchen" value=" kitchen" /> Attached kitchen</label>
+        <label><input type="checkbox" name="Water Facility"value=" water facility" /> Water Facility</label>
+        <label><input type="checkbox"  name="wifi" value=" wifi"/> WiFi </label>
+         <label><input type="checkbox"  name="Fan" value=" Fan"/> Fan </label>
+</div><br>
+    
+        <label class="form-level" >Local area Facilities:</label>
+        <label><input type="checkbox" name="school" value=" school" /> School</label>
+        <label><input type="checkbox" name="College" value="College" /> College</label>
+        <label><input type="checkbox" name="Market" value="Market" /> Market</label>
+        <label><input type="checkbox" name="Hospital" value="Hospital"/> Hospital</label>
+        <label><input type="checkbox" name="Bank" value="Bank"/> Bank</label>
+        <label><input type="checkbox" name="cafe" value="cafe"/> Cafe</label>
+        <label><input type="checkbox" name="Busstop" value=" Busstop"/> Bus stop</label>
+        <label><input type="checkbox" name="Gym" value=" Gym"/> Gym</label>
+</div>
+<br><br>
+     <label for="additionalDetails" class="form-level" >Additional Details:</label>
+             <textarea name="additionalDetails" placeholder="Type here...."></textarea>
+      </div>
+      <div class="content-contact">
+        <h3>User Details:</h3>
+        <label for="Contact Number"class="form-level">Contact Number:</label>
+        <input type="tel" name="Contact-No" pattern="[0-9]{10}" title="Please enter a valid number"  placeholder="Enter your number" class="box"required /><br><br>
+      </div>
+       
+      
+      <div class="submit-btn">
+      <button type="submit">Submit for Approval</button>
+      <button type="reset">Reset</button>
+      </div>
+    </form>
+
+      </div>
+    </form>
+    </section>
+   
+ 
+  </body>
+</html>

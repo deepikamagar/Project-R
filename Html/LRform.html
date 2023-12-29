@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rentflex - Login & Registration Form</title>
+    <link rel="stylesheet" href="../CSS/LRform.css" />
+  </head>
+  <body>
+    <header></header>
+    <section>
+      <!--Login Form-->
+      <div id="loginForm" class="form-container">
+        <h1 style="font-size: 25px; color: #883d1a">Login</h1>
+        <form onsubmit="validateLogin(event)">
+          <input
+            type="text"
+            placeholder="Enter your email"
+            id="loginemail"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Enter your password"
+            id="loginPassword"
+            required
+          />
+
+          <div class="form-checkbox">
+            <label>
+              <input type="checkbox" id="rememberMe" />
+              <span class="checkmark"></span>
+              Remember Me
+            </label>
+          </div>
+          <p style="text-align: left">
+            <a class="toggle-form" onclick="forgotPassword()"
+              >Forgot password?</a
+            >
+          </p>
+          <button type="submit">Log in</button>
+        </form>
+        <div class="bottom-link">
+          <span>Not a member?</span>
+          <a class="toggle-form" onclick="toggleForms()"> Signup Now</a>
+        </div>
+      </div>
+
+      <!--Registration Form-->
+      <div id="registrationForm" class="form-container" style="display: none">
+        <h1 style="font: size 25px; color: #883d1a">Registeration</h1>
+        <p>Please fill in the details to create an account with us.</p>
+        <form onsubmit="validateRegistration(event)">
+          <input
+            type="text"
+            placeholder="Enter your Full Name"
+            id="fullName"
+            required
+          />
+
+          <input
+            type="email"
+            placeholder="Enter your email"
+            id="regEmail"
+            required
+          />
+
+          <input
+            type="text"
+            placeholder="Enter your Address"
+            id="address"
+            required
+          />
+          <input type="text" placeholder="Enter your City" id="city" required />
+
+          <input
+            type="password"
+            placeholder="Create your password"
+            id="regPassword"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Confirm your password"
+            id="confirmPassword"
+            required
+          />
+          <div class="form-checkbox">
+            <label>
+              <input type="checkbox" id="acceptTerms" />
+              <span class="checkmark"></span>
+              I accept all the
+              <a href="">Terms and conditions</a>
+            </label>
+          </div>
+          <button type="submit">Register</button>
+        </form>
+        <div class="bottom-link">
+          <span>Already have an account? </span>
+          <a class="toggle-form" onclick="toggleForms()">Login here</a>
+        </div>
+      </div>
+    </section>
+
+    <!--JS -->
+    <script src="../JS/LRform.js"></script>
+  </body>
+</html>
