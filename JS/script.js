@@ -1,3 +1,19 @@
+//responsive navbar
+let icon = document.querySelector(".icon");
+let ul = document.querySelector("ul");
+
+icon.addEventListener("click", () => {
+  ul.classList.toggle("showData");
+
+  if (ul.className == "showData") {
+    document.getElementById("bar").className = "fa fa-xmark";
+  } else {
+    document.getElementById("bar").className = "fa fa-bars";
+  }
+});
+
+
+
 function search() {
   // Get values from the input fields
   const location = document.getElementById("location").value;

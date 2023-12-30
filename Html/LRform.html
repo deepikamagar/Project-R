@@ -5,10 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Rentflex - Login & Registration Form</title>
+    <!--------------css link---------->
     <link rel="stylesheet" href="../CSS/LRform.css" />
+    <link rel="stylesheet" href="../CSS/nav &footer.css">
+    <!--====Font-Awesome-CDN=====-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
   </head>
   <body>
-    <header></header>
+     <!--------------navbar--------->
+    <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="../images/logo.png" alt="logo" width="100vh"
+        /></a>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./aboutus.html">About</a></li>
+        <li><a href="./addroomform.html">Post room</a></li>
+        <li><a href="./viewrooms.html">View rooms</a></li>
+        <li>
+          <a href="./LRform.html"><i class="fas fa-user"></i> Login</a>
+        </li>
+      </ul>
+      <div class="icon">
+           <i  id="bar" class="fa fa-bars"></i>
+            </div>
+    </nav>
+    </header>
+
     <section>
       <!--Login Form-->
       <div id="loginForm" class="form-container">
@@ -102,6 +132,27 @@
         </div>
       </div>
     </section>
+    <!--===============footer===============-->
+    <footer class="footer-bar">
+      <ul class="footer-list">
+        <li class="footer-item"><a href="./aboutus.html">About Us</a></li>
+        <li class="footer-item"><a href="./contactus.html">Contact Us</a></li>
+        <li class="footer-item">
+          <a href="./Privacy.html">Privacy Policy</a>
+        </li>
+        <li class="footer-item">
+          <a href="./TandC.html">Terms & Conditions</a>
+        </li>
+        <li class="footer-item"><a href="./FAQ.html">FAQs</a></li>
+      </ul>
+
+      <div class="copyright">
+        <p>&copy;2023 Rentflex</p>
+      </div>
+    </footer>
+
+    <!---------------JS link---------------->
+    <script src="../JS/script.js"></script>
 
     <!--JS -->
     <script src="../JS/LRform.js"></script>

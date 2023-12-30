@@ -7,32 +7,56 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  min-height: 100vh;
+}
 
 /*-------------------navbar------------------------*/
+.logo {
+  margin-left: 20px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.logo img:hover {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+.icon {
+  align-items: center;
+  font-size: 26px;
+  color: #883d1a;
+  display: none;
+}
+
 nav {
   display: flex;
-  height: 80px;
-  width: 100%;
-  background-color: transparent;
-  align-items: center;
+  background-color: burlywood;
   justify-content: space-between;
-  padding: 0 50px 0 100px;
+  color: #fff;
+  width: 100%;
+  height: 80px;
+  align-items: center;
   flex-wrap: wrap;
-}
-nav li {
-  display: block;
+  position: sticky;
+  top: 0;
+  cursor: pointer;
+  /*
+ position: sticky;
+  top: 0;
+  cursor: pointer;*/
 }
 nav ul {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+}
+ul li {
   list-style: none;
 }
-nav ul li {
-  margin: 0 5px;
-}
-nav ul li a {
-  color: black;
-  text-decoration: none;
+ul li a {
+  margin-right: 12px;
+  margin-inline: 20px;
+  color: white;
   font-size: 18px;
   font-weight: 500;
   text-decoration: solid;
@@ -43,63 +67,38 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #883d1a;
-  background: burlywood;
+  background: white;
 }
-nav .menu-btn i {
-  color: #883d1a;
-  font-size: 22px;
-  cursor: pointer;
-  display: none;
-}
-input[type="checkbox"] {
-  display: none;
-}
-/*-----------media query for mobile-------------------*/
-@media (max-width: 1000px) {
-  nav {
-    padding: 0 40px 0 50px;
-  }
-}
-@media (max-width: 920px) {
-  nav .menu-btn i {
-    display: block;
-  }
-  #click:checked ~ .menu-btn i:before {
-    content: "\f00d";
-  }
-
+/*--==================Responsive navbar===============--*/
+@media only screen and (max-width: 700px) {
   nav ul {
+    display: none;
+  }
+  .icon {
+    display: flex;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+  .showData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 80px;
-    left: -100%;
-    background: burlywood;
-    height: 100%;
+    background-color: rgb(247, 217, 178);
     width: 100%;
+    height: 240px;
     text-align: center;
-    display: block;
-    transition: all 0.3s ease;
+    padding: 0;
+    gap: 22px;
+    margin-right: 0%;
   }
-  #click:checked ~ ul {
-    left: 0;
+  .showData li a {
+    text-decoration: solid;
   }
-  nav ul li {
-    width: 100%;
-    margin: 40px 0;
-  }
-  nav ul li a {
-    color: #f2f2f2;
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  #click:checked ~ ul li a {
-    margin-left: 0px;
-  }
-  nav ul li a:hover {
+  .showData li a:hover {
     background: none;
-    color: #883d1a;
   }
 }
 /*----------------hero section----------*/
@@ -429,61 +428,65 @@ button .search-btn :hover {
   background: #f2f2f2;
 }
 /*------------footer css--------*/
-footer {
-  background-color: transparent;
-  color: #fff;
+.footer-bar {
+  width: 100%;
+  height: 80%;
   padding: 10px;
   text-align: center;
+  background-color: burlywood;
   box-shadow: 0 0 20px rgba(0 0 0 0.1);
+  position: sticky;
+  top: 100%;
 }
-footer ul {
+.footer-bar .footer-list {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 15px;
+  border-bottom: 2px solid white;
 }
-
-footer ul li {
+.footer-bar .footer-list .footer-item {
   margin: 0 10px;
   display: inline-block;
 }
-
-footer ul li a {
-  color: black;
+.footer-bar .footer-list .footer-item a {
+  color: #fff;
   font-size: 18px;
   font-weight: 500;
-  text-decoration: none;
-  font-weight: 500;
+  text-decoration: solid;
   padding: 8px 15px;
   border-radius: 5px;
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
-footer ul li a:hover {
+.footer-bar .footer-list .footer-item a:hover {
   color: #883d1a;
-  background-color: burlywood;
-}
-.copyright {
-  margin-top: 20px;
+  background: white;
 }
 
-.copyright p {
-  color: #883d1a;
+.copyright {
+  margin: 5px;
+  font-size: 25px;
 }
+.copyright p {
+  color: white;
+  padding: 5px;
+}
+/*--==================Responsive footer===============--*/
 @media (max-width: 600px) {
-  footer ul {
+  .footer-bar {
+    width: 100%;
+    height: auto;
+  }
+  .footer-bar .footer-list {
     flex-direction: column;
     align-items: center;
   }
 
-  footer ul li {
+  .footer-bar .footer-list .footer-item {
     margin: 10px 0;
   }
 }
 .copyright {
-  margin-top: 10px;
   font-size: 15px;
-}
-.footer-links ul li a:hover {
-  background: none;
 }
