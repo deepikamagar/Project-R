@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+   </head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+body {
+  min-height: 100vh;
+}
+.logo {
+  margin-left: 20px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.logo img:hover {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+.icon {
+  align-items: center;
+  font-size: 26px;
+  color: #883d1a;
+  display: none;
+}
+
+nav {
+  display: flex;
+  background-color: burlywood;
+  justify-content: space-between;
+  color: #fff;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  cursor: pointer;
+  /*padding: 0 50px 0 100px;
+ position: sticky;
+  top: 0;
+  cursor: pointer;*/
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  margin-right: 12px;
+  margin-inline: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: solid;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a:hover {
+  color: #883d1a;
+  background: white;
+}
+/*--==================Media query for mobile===============--*/
+@media only screen and (max-width: 700px) {
+  nav ul {
+    display: none;
+  }
+  .icon {
+    display: flex;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+  .showData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    background-color: rgb(247, 217, 178);
+    width: 100%;
+    height: 240px;
+    text-align: center;
+    padding: 0;
+    gap: 22px;
+    margin-right: 0%;
+  }
+  .showData li a {
+    text-decoration: solid;
+  }
+  .showData li a:hover {
+    background: none;
+  }
+}
+
+/*--=================footer css=============--*/
+.footer-bar {
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+  text-align: center;
+  background-color: burlywood;
+  box-shadow: 0 0 20px rgba(0 0 0 0.1);
+  position: sticky;
+  top: 100%;
+}
+.footer-bar .footer-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-bottom: 2px solid white;
+}
+.footer-bar .footer-list .footer-item {
+  margin: 0 10px;
+  display: inline-block;
+}
+.footer-bar .footer-list .footer-item a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: solid;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.footer-bar .footer-list .footer-item a:hover {
+  color: #883d1a;
+  background: white;
+}
+
+.copyright {
+  margin: 5px;
+  font-size: 25px;
+}
+.copyright p {
+  color: white;
+  padding: 5px;
+}
+/*--==================Media query for mobile===============--*/
+@media (max-width: 600px) {
+  .footer-bar {
+    width: 100%;
+    height: auto;
+  }
+  .footer-bar .footer-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bar .footer-list .footer-item {
+    margin: 10px 0;
+  }
+}
+.copyright {
+  font-size: 15px;
+}
+
+</style>
+<body>
+    <!--===============header==============-->
+    <header>
+        <nav>
+             <div class="logo">
+        <a href="#"><img src="images/logo.png" alt="logo" width="100vh" /></a>
+      </div>
+             <ul>
+                <li ><a href="#home">Home</a></li>
+                 <li ><a href="#">About</a></li>
+                  <li ><a href="#">Post Room</a></li>
+                   <li ><a href="#">View Room</a></li>
+                    <li ><a href="#">Login</a></a></li>    
+            </ul>
+           <div class="icon">
+           <i  id="bar" class="fa fa-bars"></i>
+            </div>   
+        </nav>
+    </header>
+    
+<!--===============footer===============-->
+    <footer class="footer-bar">
+      <ul class="footer-list">
+        <li class="footer-item"><a href="#" >About Us</a></li>
+        <li class="footer-item"><a href="#" >Contact Us</a></li>
+        <li class="footer-item"><a href="#" >Privacy Policy</a></li>
+        <li class="footer-item"><a href="#" >Terms & Conditions</a></li>
+        <li class="footer-item"><a href="#" >FAQs</a></li>
+      </ul>
+        
+      <div class="copyright">
+        <p>&copy;2023 Rentflex</p>
+      </div>
+    </footer>
+    <!--============JS=============-->
+    <script>
+    let icon = document.querySelector(".icon");
+let ul = document.querySelector("ul");
+
+icon.addEventListener("click", ()=>{
+    ul.classList.toggle("showData");
+    
+    if(ul.className == "showData"){
+         document.getElementById("bar").className="fa fa-xmark"
+    }else{
+        document.getElementById("bar").className="fa fa-bars"
+    }
+})
+    </script>
+</body>
+</html>
+
+ 
