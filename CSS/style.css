@@ -105,87 +105,100 @@ nav ul li a:hover {
 .hero-section {
   padding: 9.6rem 9.6rem;
   background-color: #f2f2f2;
-  height: 60vh;
+  height: 50vh;
   display: flex;
-  justify-content: left;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-image: url(../images/img4.png);
+  background-image: url(../images/hero-image.png);
   background-size: cover;
   background-position: center;
 }
-.hero-section p {
-  font-size: 1.7rem;
+.hero-text h2 {
+  font-size: 3.2rem;
 }
-@media screen and (max-width: 768px) {
-  .hero-section {
-    padding: 4.8rem;
-    height: auto;
-    text-align: left;
-  }
-
-  .hero {
-    text-align: left;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero-section p {
-    font-size: 1.2rem;
-  }
+.hero-text p {
+  font-size: 1.4rem;
 }
 /*search box*/
-.section-search {
-  background: #ece9e9;
-}
 .search-container {
+  background: transparent;
+  margin-top: 20px;
+  padding: 20px;
+}
+.search-box {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   margin: 0px;
-  padding: 10px;
+  padding: 15px;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  box-shadow: 0 0 20px rgba(0 0 0 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-label {
-  font-weight: bold;
+.search-item label {
+  font-weight: 500;
   color: #883d1a;
+  font-size: 18px;
 }
-input {
-  padding: 5px;
+input,
+button {
+  border-radius: 3px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 8px;
 }
-.search-btn {
-  padding: 5px 10px;
-  background-color: #fff;
-  border: 1px solid #883d1a;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
+input:focus {
   outline: none;
+  box-shadow: 0 0 8px #bbb;
 }
-button .search-btn :hover {
+button {
   background-color: #883d1a;
+  border-radius: 5px;
+  cursor: pointer;
   color: #fff;
+  border: none;
 }
+button:hover {
+  background-color: burlywood;
+  color: #333;
+}
+/*-------------media query-----------------*/
 @media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 3rem;
+    height: auto;
+  }
+  .hero-text h2 {
+    font-size: 2.6rem;
+    margin-bottom: 3px;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
   .search-container {
-    flex-direction: row;
-    padding: 8px;
+    width: auto;
+    margin: 0px;
   }
 
-  label,
-  input,
-  button {
-    margin-bottom: 8px;
+  .search-box {
+    flex-direction: column;
+    padding: 20px;
   }
-
+  .search-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-item label {
+    margin-bottom: 5px;
+  }
   input {
-    width: 100%;
-  }
-
-  button {
-    border-radius: 4px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 8px;
   }
 }
 
@@ -205,8 +218,7 @@ button .search-btn :hover {
   align-items: center;
   max-width: 1000px;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0 0 0 0.1);
-  background-color: #eff2f8;
+  background-color: #ffffff;
   margin: 20px;
 }
 
@@ -318,6 +330,7 @@ button .search-btn :hover {
   margin: auto;
   padding: 25px;
   background: #f2f2f2;
+  border-bottom: 2px solid black;
 }
 
 .heading h2 {
@@ -370,20 +383,17 @@ button .search-btn :hover {
   margin-bottom: 8px;
 }
 
-.room-description {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 8px;
-}
-
 .room-location {
   font-size: 14px;
   color: #555;
   margin-bottom: 8px;
 }
+.room-location i {
+  color: #883d1a;
+}
 
 .room-price {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   color: #3498db;
 }
@@ -409,9 +419,12 @@ button .search-btn :hover {
   }
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 600px) {
   .room-list {
     margin: 0 auto;
+  }
+  .heading h2 {
+    font-size: 1.5rem;
   }
   .view-details-btn a {
     padding: 5px 10px;

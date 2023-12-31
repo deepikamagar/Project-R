@@ -13,7 +13,7 @@ icon.addEventListener("click", () => {
 });
 
 
-
+//search
 function search() {
   // Get values from the input fields
   const location = document.getElementById("location").value;

@@ -42,28 +42,30 @@
     </nav>
     </header>
 
-    <!-------------room section------------->
+    <!-------------hero section------------->
     <section class="hero-section">
-      <div class="hero">
-        <h2 style="font-size: 3.2rem">Rentflex</h2>
+      <div class="hero-text">
+        <h2>Rentflex</h2>
         <p>Find your perfect room to rent.</p>
       </div>
-    </section>
-    <!--searchsection-->
-    <section class="section-search">
+<!--search box -->
       <div class="search-container">
-        <label for="location">Location:</label>
-        <input type="text" id="location" placeholder="Enter location" />
+        <div class="search-box">
+          <div class="search-item">
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Enter location" />
+          </div>
 
-        <label for="price">Price:</label>
-        <input type="text" id="price" placeholder="Enter price" />
+          <div class="search-item">
+            <label for="price">Price:</label>
+            <input type="text" id="price" placeholder="Enter price" />
+          </div>
 
-        <button class="search-btn" onclick="search()">
-          <i class="uil uil-search"></i>
-        </button>
+          <button onclick="search()">Search</button>
+        </div>
+        <!-- Results will be displayed here -->
+        <div id="results-container"></div>
       </div>
-      <!-- Results will be displayed here -->
-      <div id="results-container"></div>
     </section>
 
     <!-------------About us section section------------->
@@ -85,85 +87,49 @@
       </div>
     </section>
 
-    <!-------------room section------------->
+    <!-------------Featured room section------------->
     <section class="room-section" id="rooms">
       <div class="heading">
         <h2>Featured Rooms</h2>
       </div>
+
       <div class="room-list">
         <div class="room-item">
-          <img class="room-image" src="../images/img1.jpg" alt="Room Image" />
+          <img class="room-photo" src="../images/img1.jpg" alt="Room Image" />
           <div class="room-details">
             <div class="room-title">Cozy Room</div>
-            <div class="room-description">
-              A comfortable space for your stay.
-            </div>
-            <div class="room-location">
-              <i class="uil uil-location-point"></i>Kotihawa
+                       <div class="room-location">
+              <i class="fa fa-location-dot"></i>Kotihawa
             </div>
             <div class="room-price">Rs.4000 per month</div>
           </div>
           <div class="view-details-btn">
-            <a href="./viewrooms.html">View Details</a>
+            <a href="#">View Details</a>
           </div>
         </div>
 
-        <div class="room-item">
-          <img class="room-image" src="../images/img2.jpg" alt="Room Image" />
-          <div class="room-details">
-            <div class="room-title">Spaceous Room</div>
-            <div class="room-description">
-              A comfortable space for your stay.
-            </div>
-            <div class="room-location">
-              <i class="uil uil-location-point"></i>Butwal
-            </div>
-            <div class="room-price">Rs.5000 per month</div>
-          </div>
-          <div class="view-details-btn">
-            <a href="./viewrooms.html">View Details</a>
-          </div>
-        </div>
-
-        <div class="room-item">
-          <img class="room-image" src="../images/img3.png" alt="Room Image" />
-          <div class="room-details">
-            <div class="room-title">Normal Room</div>
-            <div class="room-description">
-              A comfortable space for your stay.
-            </div>
-            <div class="room-location">
-              <i class="uil uil-location-point"></i>Bhalwari
-            </div>
-            <div class="room-price">Rs.3500 per month</div>
-          </div>
-
-          <div class="view-details-btn">
-            <a href="./viewrooms.html">View Details</a>
-          </div>
-        </div>
+       
       </div>
     </section>
-    <!-------------all rooms section------------->
+    <!----------------All rooms----------->
     <section class="room-section2" id="all-rooms">
       <div class="heading">
         <h2>All Rooms</h2>
       </div>
+
       <div class="room-list">
         <div class="room-item">
           <img class="room-image" src="../images/img1.jpg" alt="Room Image" />
           <div class="room-details">
             <div class="room-title">Cozy Room</div>
-            <div class="room-description">
-              A comfortable space for your stay.
-            </div>
+            
             <div class="room-location">
-              <i class="uil uil-location-point"></i>Kotihawa
+              <i class="fa fa-location-dot"></i>Kotihawa
             </div>
             <div class="room-price">Rs.4000 per month</div>
           </div>
           <div class="view-details-btn">
-            <a href="./viewrooms.html">View Details</a>
+            <a href="#">View Details</a>
           </div>
         </div>
 
@@ -171,39 +137,19 @@
           <img class="room-image" src="../images/img2.jpg" alt="Room Image" />
           <div class="room-details">
             <div class="room-title">Spaceous Room</div>
-            <div class="room-description">
-              A comfortable space for your stay.
-            </div>
+           
             <div class="room-location">
-              <i class="uil uil-location-point"></i>Butwal
+              <i class="fa fa-location-dot"></i>Butwal
             </div>
             <div class="room-price">Rs.5000 per month</div>
           </div>
-          <div class="view-details-btn">
-            <a href="./viewrooms.html">View Details</a>
-          </div>
-        </div>
-
-        <div class="room-item">
-          <img class="room-image" src="../images/img3.png" alt="Room Image" />
-          <div class="room-details">
-            <div class="room-title">Normal Room</div>
-            <div class="room-description">
-              A comfortable space for your stay.
-            </div>
-            <div class="room-location">
-              <i class="uil uil-location-point"></i>Bhalwari
-            </div>
-            <div class="room-price">Rs.3500 per month</div>
+        
+            <a href="#"><button>View Details</button></a>
           </div>
 
-          <div class="view-details-btn">
-            <a href="./viewrooms.html">View Details</a>
-          </div>
-        </div>
+        
       </div>
     </section>
-
     <!--===============footer===============-->
     <footer class="footer-bar">
       <ul class="footer-list">
