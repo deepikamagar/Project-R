@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Rentflex landing page</title>
+    <title>Rentflex dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--css link-->
     <link rel="stylesheet" href="../CSS/style.css" />
@@ -17,6 +17,13 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+    <style>
+        .dropdown{
+            height: auto;
+            min-width: 20rem;
+            display: flex;
+        }
+    </style>
   </head>
   <body>
     <!--header-->
@@ -32,7 +39,10 @@
           <li><a href="./aboutus.html">About</a></li>
           <li><a href="./addroomform.html">Post room</a></li>
           <li>
-            <a href="./LRform.html"><i class="fa fa-user"></i> Login</a>
+            <a href="#"><i class="fa fa-user"></i> User</a>
+            <ul class="drop-drown">
+              <li ><a href="#">Logout</a></li>
+                         </ul>
           </li>
         </ul>
         <div class="icon">
@@ -70,14 +80,14 @@
     </section>
 
     <!-- Marquee welcome -->
-  
-      <marquee behavior="scroll" direction="left">
-        <p>
-          Welcome to Rentflex - Your ultimate destination for finding the
-          perfect room to rent!
-        </p>
-      </marquee>
-    
+
+    <marquee behavior="scroll" direction="left">
+      <p>
+        Welcome to Rentflex - Your ultimate destination for finding the perfect
+        room to rent!
+      </p>
+    </marquee>
+
     <!-------------About us section section------------>
     <section class="about-us-container">
       <div class="about-us-content">

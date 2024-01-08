@@ -96,6 +96,15 @@ label {
   margin-top: 5px;
   margin-bottom: 15px;
 }
+.image-container {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.file-upload {
+  display: none;
+  margin-top: 10px;
+}
 
 .form-level {
   font-weight: bold;
@@ -159,10 +168,9 @@ textarea {
 
   p {
     font-size: 15px;
-    
   }
   h3 {
-    font-size: 20px; 
+    font-size: 20px;
   }
   .box,
   textarea,

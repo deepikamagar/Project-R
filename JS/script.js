@@ -12,56 +12,85 @@ icon.addEventListener("click", () => {
   }
 });
 
-//search
-function search() {
-  // Get values from the input fields
-  const location = document.getElementById("location").value;
-  const price = document.getElementById("price").value;
+//search & filter
+document.addEventListener("DOMContentLoaded", function () {
+  const searchButton = document.querySelector(".search-box button");
+  searchButton.addEventListener("click", filterRooms);
 
-  // Perform search logic (replace this with your actual search logic)
-  const results = performSearch(location, price);
+  function filterRooms() {
+    const locationInput = document.getElementById("location");
+    const priceInput = document.getElementById("price");
+    const locationFilter = locationInput.value.toLowerCase();
+    const priceFilter = parseFloat(priceInput.value); // Convert input to a floating-point number
 
-  // Display results
-  displayResults(results);
-}
+    const allRoomItems = document.querySelectorAll(".room-section2 .room-item");
+    const featuredRoomItems = document.querySelectorAll(
+      ".room-section .room-item"
+    );
+    let anyMatchAllRooms = false;
+    let anyMatchFeaturedRooms = false;
 
-function performSearch(location, price) {
-  // Replace this with your actual search logic
-  // For demonstration purposes, let's assume an array of sample data
-  const sampleData = [
-    { location: "City A", price: 1000 },
-    { location: "City B", price: 1500 },
-    { location: "City C", price: 1200 },
-  ];
+    allRoomItems.forEach((item) => {
+      const roomTitle = item
+        .querySelector(".room-title")
+        .textContent.toLowerCase();
+      const roomLocation = item
+        .querySelector(".room-location")
+        .textContent.toLowerCase();
+      const roomPrice = parseFloat(
+        item
+          .querySelector(".room-price")
+          .textContent.replace("Rs.", "")
+          .replace("per month", "")
+      );
 
-  // Filter results based on user input
-  const filteredResults = sampleData.filter(
-    (item) =>
-      item.location.toLowerCase().includes(location.toLowerCase()) &&
-      item.price <= parseInt(price || Infinity)
-  );
+      const locationMatch = roomLocation.includes(locationFilter);
+      const priceMatch = isNaN(priceFilter) || roomPrice === priceFilter; // Check if price is not a number or matches exactly
 
-  return filteredResults;
-}
+      if (locationMatch && priceMatch) {
+        item.style.display = "block";
+        anyMatchAllRooms = true;
+      } else {
+        item.style.display = "none";
+      }
+    });
 
-function displayResults(results) {
-  const resultsContainer = document.getElementById("results-container");
+    featuredRoomItems.forEach((item) => {
+      const roomLocation = item
+        .querySelector(".room-location")
+        .textContent.toLowerCase();
+      const roomPrice = parseFloat(
+        item
+          .querySelector(".room-price")
+          .textContent.replace("Rs.", "")
+          .replace("per month", "")
+      );
 
-  // Clear previous results
-  resultsContainer.innerHTML = "";
+      const locationMatch = roomLocation.includes(locationFilter);
+      const priceMatch = isNaN(priceFilter) || roomPrice === priceFilter; // Check if price is not a number or matches exactly
 
-  if (results.length === 0) {
-    resultsContainer.innerHTML = "No results found.";
-    return;
+      if (locationMatch && priceMatch) {
+        item.style.display = "block";
+        anyMatchFeaturedRooms = true;
+      } else {
+        item.style.display = "none";
+      }
+    });
+
+    displayNoResultsMessage(anyMatchAllRooms, "all-rooms-no-results");
+    displayNoResultsMessage(anyMatchFeaturedRooms, "featured-rooms-no-results");
   }
 
-  // Display results
-  results.forEach((result) => {
-    const resultElement = document.createElement("div");
-    resultElement.textContent = `Location: ${result.location}, Price: $${result.price}`;
-    resultsContainer.appendChild(resultElement);
-  });
-}
+  function displayNoResultsMessage(anyMatch, containerId) {
+    const noResultsContainer = document.getElementById(containerId);
+    if (anyMatch) {
+      noResultsContainer.style.display = "none";
+    } else {
+      noResultsContainer.style.display = "block";
+    }
+  }
+});
+
 //add room image
 let uploadCount = 0;
 
@@ -73,4 +102,9 @@ function showFileInput() {
   } else {
     alert("You can only upload 3 photos");
   }
+}
+
+function changeImage(element) {
+  var mainImg = document.getElementById("MainImg");
+  mainImg.src = element.querySelector("img").src;
 }
