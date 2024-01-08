@@ -12,7 +12,6 @@ icon.addEventListener("click", () => {
   }
 });
 
-
 //search
 function search() {
   // Get values from the input fields
@@ -62,4 +61,16 @@ function displayResults(results) {
     resultElement.textContent = `Location: ${result.location}, Price: $${result.price}`;
     resultsContainer.appendChild(resultElement);
   });
+}
+//add room image
+let uploadCount = 0;
+
+function showFileInput() {
+  if (uploadCount < 3) {
+    uploadCount++;
+    const fileUploadDiv = document.getElementById(`fileUpload${uploadCount}`);
+    fileUploadDiv.style.display = "block";
+  } else {
+    alert("You can only upload 3 photos");
+  }
 }
