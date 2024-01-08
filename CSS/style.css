@@ -105,7 +105,7 @@ nav ul li a:hover {
 .hero-section {
   padding: 9.6rem 9.6rem;
   background-color: #f2f2f2;
-  height: 50vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,6 +119,12 @@ nav ul li a:hover {
 }
 .hero-text p {
   font-size: 1.4rem;
+}
+marquee {
+  font-size: 30px;
+  color: #883d1a;
+  font-weight: solid;
+  font-family: serif;
 }
 /*search box*/
 .search-container {
@@ -202,7 +208,7 @@ button:hover {
   }
 }
 
-/*-----------------------about section------------------------*/
+/*-----------------------about section------------------------
 .about-us-container {
   background-color: #ffffff;
   text-align: center;
@@ -287,7 +293,7 @@ button:hover {
 
 .read-more-btn :hover {
   background: burlywood;
-}
+}*/
 
 /* -------Media query for mobile devices-------- */
 @media screen and (max-width: 600px) {
@@ -388,14 +394,14 @@ button:hover {
   color: #555;
   margin-bottom: 8px;
 }
-.room-location i {
+/*.room-location i {
   color: #883d1a;
-}
+}*/
 
 .room-price {
   font-size: 15px;
   font-weight: bold;
-  color: #3498db;
+  color: #883d1a;
 }
 .view-details-btn a {
   display: inline-block;
@@ -440,6 +446,9 @@ button:hover {
   padding: 25px;
   background: #f2f2f2;
 }
+
+
+
 /*------------footer css--------*/
 .footer-bar {
   width: 100%;

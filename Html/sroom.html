@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rentflex home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--------------css link---------->
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <!--====Font-Awesome-CDN=====-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <style>
+      /*---------- room details section----------*/
+      #prodetails {
+        display: flex;
+        margin-top: 20px;
+      }
+      #prodetails .single-pro-image {
+        width: 40%;
+        margin: 50px 60px;
+      }
+      .small-img-group {
+        display: flex;
+        justify-content: space-between;
+      }
+      .small-img-col {
+        flex-basis: 45%;
+        cursor: pointer;
+        margin-top: 5px;
+      }
+
+      .single-pro-details {
+        width: 100%;
+      }
+
+      .single-room-details {
+        max-width: 100%;
+        margin: 2rem auto;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .b-heading {
+        text-align: center;
+        color: #333;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        max-width: 2px;
+        border: none;
+      }
+      s.heading {
+      }
+
+      th {
+        text-decoration: solid;
+        color: #833d1a;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--===============header==============-->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html"
+            ><img src="../images/logo.png" alt="logo" width="100vh"
+          /></a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./aboutus.html">About</a></li>
+          <li><a href="./addroomform.html">Post room</a></li>
+          <li><a href="./viewrooms.html">View rooms</a></li>
+          <li>
+            <a href="./LRform.html"><i class="fa fa-user"></i> Login</a>
+          </li>
+        </ul>
+        <div class="icon">
+          <i id="bar" class="fa fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <!--single room details-->
+    <section id="prodetails" class="section-p1">
+      <div class="single-pro-image">
+        <img src="../images/img3.png" width="100%" id="MainImg" alt="" />
+
+        <div class="small-img-group">
+          <div class="small-img-col">
+            <img src="../images/1.jpg" width="100%" />
+          </div>
+          <div class="small-img-col">
+            <img src="../images/1.jpg" width="100%" />
+          </div>
+        </div>
+      </div>
+
+      <div class="single-pro-details">
+        <h6>Home/View rooms</h6>
+        <h4>Cozy Room</h4>
+        <h2 style="color: #883d1a">Rs.5000</h2>
+
+        <div class="single-room-details">
+          <h1 class="b-heading">Room Details</h1>
+          <table>
+            <tr>
+              <th colspan="2">Basic Details</th>
+            </tr>
+            <tr>
+              <td class="s-heading">Room photo:</td>
+              <td><!-- Room Title Value --></td>
+            </tr>
+            <tr>
+              <td class="s-heading">Additional room photo:</td>
+              <td><!-- Room Title Value --></td>
+            </tr>
+            <tr>
+              <td class="s-heading">Room Title:</td>
+              <td><!-- Room Title Value --></td>
+            </tr>
+            <tr>
+              <td class="s-heading">Room Location:</td>
+              <td><!-- Room Location Value --></td>
+            </tr>
+            <tr>
+              <td class="s-heading">Price:</td>
+              <td><!-- Price Value --></td>
+            </tr>
+            <tr>
+              <td class="s-heading">Price Negotiable:</td>
+              <td><!-- Price Negotiable Value --></td>
+            </tr>
+            <tr>
+              <td class="s-heading">Room Area:</td>
+              <td><!-- Room Area Value --></td>
+            </tr>
+            <tr>
+              <td class="s-heading">Room Type:</td>
+              <td><!-- Room Type Value --></td>
+            </tr>
+            <tr>
+              <th colspan="2">Other Details</th>
+            </tr>
+
+            <tr>
+              <td class="s-heading">Room Facilities:</td>
+              <td><!-- Room Facilities Values --></td>
+            </tr>
+            <tr>
+              <td class="s-heading">Local Area Facilities:</td>
+              <td><!-- Local Area Facilities Values --></td>
+            </tr>
+            <tr>
+              <td class="s-heading">Additional Details:</td>
+              <td><!-- Additional Details Value --></td>
+            </tr>
+            <tr>
+              <th colspan="2">User Details</th>
+            </tr>
+            <tr>
+              <td class="s-heading">Contact Number:</td>
+              <td><!-- Contact Number Value --></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-------------Related room section------------->
+    <section class="room-section" id="rooms">
+      <div class="heading">
+        <h2>Related Rooms</h2>
+      </div>
+
+      <div class="room-list">
+        <div class="room-item">
+          <img class="room-photo" src="../images/1.jpg" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Cozy Room</div>
+            <div class="room-location">
+              <i class="fa fa-location-dot"></i>Kotihawa
+            </div>
+            <div class="room-price">Rs.4000 per month</div>
+          </div>
+          <div class="view-details-btn">
+            <a href="#">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--===============footer===============-->
+    <footer class="footer-bar">
+      <ul class="footer-list">
+        <li class="footer-item"><a href="./aboutus.html">About Us</a></li>
+        <li class="footer-item"><a href="./contactus.html">Contact Us</a></li>
+        <li class="footer-item"><a href="./Privacy.html">Privacy Policy</a></li>
+        <li class="footer-item">
+          <a href="./TandC.html">Terms & Conditions</a>
+        </li>
+        <li class="footer-item"><a href="./FAQ.html">FAQs</a></li>
+      </ul>
+
+      <div class="copyright">
+        <p>&copy;2023 Rentflex</p>
+      </div>
+    </footer>
+
+    <!---------------JS link---------------->
+    <script src="../JS/script.js"></script>
+    <!--============JS=============-->
+  </body>
+</html>

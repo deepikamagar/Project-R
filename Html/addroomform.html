@@ -14,7 +14,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+<style>
+   .image-container {
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
 
+        .file-upload {
+            display: none;
+            margin-top: 10px;
+        }
+</style>
   </head>
   <body>
      <!--------------navbar--------->
@@ -88,13 +98,24 @@
        <label for="Room Photo"class="form-level">Room Photo:</label>
       <input type="file" name="photo" required />
       </div>
-      <div class="input-group">
-       <label for=" More room photos" class="form-level">More room photos:</label>
-          <div class="photo-upload">
-            <input type="file" name="photo1" />
-            <input type="file" name="photo2" />
+             <div class="input-group">
+        <div class="image-container" onclick="showFileInput()">
+          <label for=" More room photos" class="form-level">Add more photos</label>
+        <i  class="fa fa-plus"></i>
+      </div>
+
+      <div class="file-upload" id="fileUpload1">
+        <input type="file" name="file1" accept="image/*" />
+      </div>
+
+      <div class="file-upload" id="fileUpload2">
+        <input type="file" name="file2" accept="image/*" />
+      </div>
+
+      <div class="file-upload" id="fileUpload3">
+        <input type="file" name="file3" accept="image/*" />
+      </div>
           </div>
-         </div>
         </div>
           
 
