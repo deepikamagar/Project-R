@@ -103,7 +103,7 @@ function showFileInput() {
     alert("You can only upload 3 photos");
   }
 }
-
+//sroom photochange
 function changeImage(element) {
   var mainImg = document.getElementById("MainImg");
   mainImg.src = element.querySelector("img").src;
