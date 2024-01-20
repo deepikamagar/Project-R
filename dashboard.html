@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Rental Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+      }
+      h2,
+      h3 {
+        color: #883d1a;
+      }
+      .logo {
+        padding: 10px;
+      }
+      .sidebar {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        background-color: burlywood;
+        padding-top: 20px;
+        text-align: center;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar ul li {
+        padding: 20px;
+      }
+
+      .sidebar ul li a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .sidebar ul li a:hover {
+        color: #883d1a;
+      }
+      .sidebar-item {
+        display: block;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        margin-top: 10px;
+      }
+      .dashboard-box {
+        width: 20%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 16px;
+        margin-top: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .dashboard-box h3 {
+        color: #883d1a;
+      }
+
+      .dashboard-box p {
+        margin: 0;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .content {
+        margin-left: 220px;
+        padding: 16px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+      }
+
+      th {
+        background-color: burlywood;
+        color: #fff;
+      }
+      @media (max-width: 700px) {
+        .dashboard-box {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="../images/logo.png" alt="Logo" width="100vh" />
+      </div>
+
+      <div class="sidebar-item">
+        <ul>
+          <li><a href="d.html" class="active">Dashboard</a></li>
+          <li><a href="#" onclick="showAnalytics()">Analytics</a></li>
+          <li><a href="#">Messages</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>Welcome to Rentflex Dashboard</h2>
+      <div class="dashboard-box">
+        <h3>Total Users</h3>
+        <p>100</p>
+      </div>
+
+      <div class="dashboard-box">
+        <h3>Total Room Listings</h3>
+        <p>35</p>
+      </div>
+
+      <div id="analytics-table" class="hidden">
+        <h3>Analytics of Room listing</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>Room Title</th>
+              <th>Price</th>
+              <th>Price Negotiable</th>
+              <th>Room Area</th>
+              <th>Room Type</th>
+              <th>Room Photo</th>
+              <th>Add more photos</th>
+              <th>Room Facilities</th>
+              <th>Local area Facilities</th>
+              <th>Additional Details</th>
+              <th>Contact Number</th>
+              <th>Added Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Analytics data  -->
+            <tr>
+              <td>User123</td>
+              <td>Room 1</td>
+              <td>Rs.5000</td>
+              <td>No</td>
+              <td>250sq.ft</td>
+              <td>Medium</td>
+              <td><img src="user1.jpg" alt="User Photo" width="30" /></td>
+              <td><img src="user2.jpg" alt="User Photo" width="30" /></td>
+              <td>wifi</td>
+              <td>Market college bustop</td>
+              <td>Room has two windows</td>
+             <td>08/05/2023</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>User123</td>
+              <td>Room 1</td>
+              <td>Rs.5000</td>
+              <td>No</td>
+              <td>250sq.ft</td>
+              <td>Medium</td>
+              <td><img src="user1.jpg" alt="User Photo" width="30" /></td>
+              <td><img src="user2.jpg" alt="User Photo" width="30" /></td>
+              <td>wifi</td>
+              <td>Market college bustop</td>
+              <td>Room has two windows</td>
+             <td>08/05/2023</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      function showAnalytics() {
+        const analyticsTable = document.getElementById("analytics-table");
+        const dashboardBoxes = document.querySelectorAll(".dashboard-box");
+
+        analyticsTable.classList.toggle("hidden");
+
+        dashboardBoxes.forEach((box) => {
+          box.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>

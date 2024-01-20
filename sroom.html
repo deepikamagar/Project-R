@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rentflex home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--------------css link---------->
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <!--====Font-Awesome-CDN=====-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <style>
+    
+ * {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .s-room {
+  width: 80%;
+  margin: 4% 10%;
+  align-items: center;
+}
+    .single-room-details {
+  width: 100%;
+  margin:2rem auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+#prodetails{
+ display: flex;
+  margin: 20px;
+}
+#prodetails .single-pro-image {
+  width: 100%;
+  margin: 20px ;
+}
+.small-img-group {
+  display: flex;
+  justify-content: space-between;
+}
+.small-img-col {
+  flex-basis: 30%;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+ 
+
+
+
+.ac-btn {
+  background-color: #883d1a;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.room-details{
+  margin-top: 20px;
+  padding: 16px;
+}
+
+
+.room-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.room-location {
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 8px;
+}
+.room-location i {
+  color: #333;
+}
+
+.room-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #883d1a;
+}
+table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      color:#883d1a;
+    }
+.s-heading{
+  font-weight: 500;
+
+}
+       @media only screen and (max-width: 768px) {
+      .s-room {
+        width: 85%;
+     }
+
+      .single-pro-details,
+      .room-details2 {
+        width: 100%;
+        margin: 0;
+      }
+      #prodetails{
+        flex-direction: column ;
+        }
+    }
+
+    </style>
+  </head>
+  <body>
+    <!--===============header==============-->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html"
+            ><img src="../images/logo.png" alt="logo" width="100vh"
+          /></a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./aboutus.html">About</a></li>
+          <li><a href="./addroomform.html">Post room</a></li>
+          <li><a href="./viewrooms.html">View rooms</a></li>
+          <li>
+            <a href="./LRform.html"><i class="fa fa-user"></i> Login</a>
+          </li>
+        </ul>
+        <div class="icon">
+          <i id="bar" class="fa fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--single room details-->
+   <section class="s-room">
+<div class="single-room-details">
+        
+  <div id="prodetails" class="section-p1">
+       <div class="single-pro-image">
+        <img src="../images/img3.png" width="100%" id="MainImg" alt="" /></td>
+            
+     <div class="small-img-group">
+          <div class="small-img-col" onclick="changeImage(this)">
+            <img src="../images/1.jpg" width="100%" /></div>
+          <div class="small-img-col" onclick="changeImage(this)">
+            <img src="../images/3.jpg" width="100%"  /></div>
+          <div class="small-img-col" onclick="changeImage(this)">
+            <img src="../images/4.jpg" width="100%"  /> </div>
+      </div>
+  
+
+     <div class="single-pro-details">
+        <div class="room-details">
+            <div class="room-title">Cozy Room</div>
+
+            <div class="room-location">
+              <i class="fa fa-location-dot"></i>Kotihawa
+            </div>
+            <div class="room-price">Rs.4000 per month</div>
+        
+            <button class="ac-btn">Add To Cart</button>
+           </div>
+      </div>
+ </div>
+          <div class="room-details2">
+            <table>
+           <tr>
+            <th colspan="2">Room Details:</th>
+          </tr>
+          <tr>
+            <td class="s-heading">Price Negotiable:</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td class="s-heading">Room Area:</td>
+            <td>25 sq ft </td>
+          </tr>
+          <tr>
+            <td class="s-heading">Room Type:</td>
+            <td>small</td>
+          </tr>
+          <tr>
+            <th colspan="2">Other Details:</th>
+          </tr>
+
+          <tr>
+            <td class="s-heading">Room Facilities:</td>
+            <td>wifi</td>
+          </tr>
+          <tr>
+            <td class="s-heading">Local Area Facilities:</td>
+            <td>School hospital bustop</td>
+          </tr>
+          <tr>
+            <td class="s-heading">Additional Details:</td>
+            <td>There are two windows in this room</td>
+          </tr>
+          <tr>
+            <th colspan="2">User Details:</th>
+          </tr>
+          <tr>
+            <td class="s-heading">Contact Number:</td>
+            <td>980000000000</td>
+          </tr> 
+          <tr>
+            <td class="s-heading">Added Date:</td>
+            <td>08/05/2023</td>
+          </tr>
+          </table>
+          </div>
+
+
+          </div>
+           </div>
+            </section>
+
+
+    <!-------------Related room section------------->
+    <section class="room-section" id="rooms">
+      <div class="heading">
+        <h2>Related Rooms</h2>
+      </div>
+
+      <div class="room-list">
+        <div class="room-item"  onclick="window.location.href='./sroom.html'">
+          <img class="room-photo" src="../images/1.jpg" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Cozy Room</div>
+            <div class="room-location">
+              <i class="fa fa-location-dot"></i>Kotihawa
+            </div>
+            <div class="room-price">Rs.4000 per month</div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!--===============footer===============-->
+    <footer class="footer-bar">
+      <ul class="footer-list">
+        <li class="footer-item"><a href="./aboutus.html">About Us</a></li>
+        <li class="footer-item"><a href="./contactus.html">Contact Us</a></li>
+        <li class="footer-item"><a href="./Privacy.html">Privacy Policy</a></li>
+        <li class="footer-item">
+          <a href="./TandC.html">Terms & Conditions</a>
+        </li>
+        <li class="footer-item"><a href="./FAQ.html">FAQs</a></li>
+      </ul>
+
+      <div class="copyright">
+        <p>&copy;2023 Rentflex</p>
+      </div>
+    </footer>
+
+    <!---------------JS link---------------->
+    <script src="../JS/script.js"></script>
+    <!--============JS=============-->
+  </body>
+</html>

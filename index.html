@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rentflex landing page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--css link-->
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <!--====Font-Awesome-CDN=====-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <!--header-->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html"
+            ><img src="../images/logo.png" alt="logo" width="100vh"
+          /></a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./aboutus.html">About</a></li>
+          <li><a href="./addroomform.html">Post room</a></li>
+          <li>
+            <a href="./LRform.html"><i class="fa fa-user"></i> Login</a>
+          </li>
+        </ul>
+        <div class="icon">
+          <i id="bar" class="fa fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-------------hero section------------->
+    <section class="hero-section">
+      <div class="hero-text">
+        <h2>Rentflex</h2>
+        <p>Find your perfect room to rent.</p>
+      </div>
+      <!--search box -->
+      <div class="search-container">
+        <div class="search-box">
+          <form id="searchForm">
+            <div class="search-item">
+              <label for="location">Location:</label>
+              <input type="text" id="location" placeholder="Enter location" />
+            </div>
+
+            <div class="search-item">
+              <label for="price">Price:</label>
+              <input type="text" id="price" placeholder="Enter price" />
+            </div>
+
+            <button type="button" onclick="filterRooms()">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee welcome -->
+
+    <marquee behavior="scroll" direction="left">
+      <p>
+        Welcome to Rentflex - Your ultimate destination for finding the perfect
+        room to rent!
+      </p>
+    </marquee>
+
+    <!-------------About us section section------------>
+    <section class="about-us-container">
+      <div class="about-us-content">
+        <div class="image-slider"></div>
+        <div class="about-description">
+          <h1>About us</h1>
+          <h2>Welcome to Rentflex</h2>
+          <p>
+            Rentflex is your go-to platform for hassle-free and secure online
+            room rental. Our mission is to connect tenants with their ideal
+            living spaces, making the renting process simple and efficient.
+          </p>
+          <div class="read-more-btn">
+            <a href="./aboutus.html">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------Featured room section------------->
+    <section class="room-section" id="rooms">
+      <div class="heading">
+        <h2>Featured Rooms</h2>
+      </div>
+
+      <div id="featured-rooms-no-results" style="display: none">
+        <div class="not-found">No results found!</div>
+      </div>
+
+      <div class="room-list">
+        <div class="room-item" onclick="window.location.href='./sroom.html'">
+          <img class="room-photo" src="../images/img1.jpg" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Cozy Room</div>
+            <div class="room-location">
+              <i class="fa fa-location-dot"></i> Kotihawa
+            </div>
+            <div class="room-price">Rs.4000 per month</div>
+          </div>
+          <!----<div class="view-details-btn">
+            <a href="#">View Details</a>
+          </div>-->
+        </div>
+      </div>
+    </section>
+    <hr />
+    <!----------------All rooms----------->
+    <section class="room-section2" id="all-rooms">
+      <div class="heading">
+        <h2>All Rooms</h2>
+      </div>
+
+      <div id="all-rooms-no-results" style="display: none">
+        <div class="not-found">No results found!</div>
+      </div>
+
+      <div class="room-list">
+        <div class="room-item" onclick="window.location.href='./sroom.html'">
+          <img class="room-image" src="../images/img1.jpg" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Cozy Room</div>
+
+            <div class="room-location">
+              <i class="fa fa-location-dot"></i>Kotihawa
+            </div>
+            <div class="room-price">Rs.4000 per month</div>
+          </div>
+        </div>
+
+        <div class="room-item" onclick="window.location.href='./sroom.html'">
+          <img class="room-image" src="../images/img2.jpg" alt="Room Image" />
+          <div class="room-details">
+            <div class="room-title">Spaceous Room</div>
+
+            <div class="room-location">
+              <i class="fa fa-location-dot"></i>Butwal
+            </div>
+            <div class="room-price">Rs.5000 per month</div>
+          </div>
+        </div>
+      </div>
+      <section id="pagination">
+       <a href="">Next <i class="fa fa-long-arrow-alt-right"></i></a>
+      </section>
+    </section>
+
+    <!--===============footer===============-->
+    <footer class="footer-bar">
+      <ul class="footer-list">
+        <li class="footer-item"><a href="./aboutus.html">About Us</a></li>
+        <li class="footer-item"><a href="./contactus.html">Contact Us</a></li>
+        <li class="footer-item"><a href="./Privacy.html">Privacy Policy</a></li>
+        <li class="footer-item">
+          <a href="./TandC.html">Terms & Conditions</a>
+        </li>
+        <li class="footer-item"><a href="./FAQ.html">FAQs</a></li>
+      </ul>
+
+      <div class="copyright">
+        <p>&copy;2023 Rentflex</p>
+      </div>
+    </footer>
+
+    <!---------------JS link---------------->
+    <script src="../JS/script.js"></script>
+    <!--============JS=============-->
+  </body>
+</html>
