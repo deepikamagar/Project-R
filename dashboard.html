@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <title>Rentflex landing page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Room Rental Dashboard</title>
+    <!--css link-->
+    <link rel="stylesheet" href="../CSS/style.css" />
 
-    <link rel="stylesheet" href="dashboard.css" />
+    <!--====Font-Awesome-CDN=====-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <style>
-      body {
+        body {
         font-family: "Arial", sans-serif;
         margin: 0;
       }
@@ -15,45 +21,59 @@
       h3 {
         color: #883d1a;
       }
+     
       .logo {
-        padding: 10px;
+        margin-left: 20px;
+        border-radius: 5px;
+        padding: 5px;
       }
-      .sidebar {
-        height: 100%;
-        width: 200px;
-        position: fixed;
+  
+      .icon {
+        align-items: center;
+        font-size: 26px;
+        color: #883d1a;
+        display: none;
+      }
+
+      nav {
+        display: flex;
         background-color: burlywood;
-        padding-top: 20px;
-        text-align: center;
-      }
-
-      .sidebar ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .sidebar ul li {
-        padding: 20px;
-      }
-
-      .sidebar ul li a {
-        text-decoration: none;
+        justify-content: space-between;
         color: #fff;
-        display: block;
+        width: 100%;
+        height: 80px;
+        align-items: center;
+        flex-wrap: wrap;
+        position: sticky;
+        top: 0;
+        z-index: 10000;
+        cursor: pointer;
+      }
+      nav ul {
+        display: flex;
+        align-items: center;
+      }
+      ul li {
+        list-style: none;
+      }
+      ul li a {
+        margin-right: 12px;
+        margin-inline: 20px;
+        color: white;
         font-size: 18px;
         font-weight: 500;
+        text-decoration: solid;
+        padding: 8px 15px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
       }
-
-      .sidebar ul li a:hover {
+      nav ul li a:hover {
         color: #883d1a;
+        background: white;
       }
-      .sidebar-item {
-        display: block;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        padding: 16px;
-        margin-top: 10px;
-      }
+       
+
       .dashboard-box {
         width: 20%;
         border: 1px solid #ddd;
@@ -75,7 +95,7 @@
       }
 
       .content {
-        margin-left: 220px;
+     margin: 20px;
         padding: 16px;
       }
 
@@ -98,7 +118,7 @@
       th,
       td {
         padding: 12px;
-        text-align: left;
+        text-align: center;
       }
 
       th {
@@ -110,24 +130,56 @@
           width: 50%;
         }
       }
+      /*--==================Responsive navbar===============--*/
+      @media only screen and (max-width: 700px) {
+        nav ul {
+          display: none;
+        }
+        .icon {
+          display: flex;
+          cursor: pointer;
+          margin-right: 15px;
+        }
+        .showData {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 80px;
+          background-color: rgb(247, 217, 178);
+          width: 100%;
+          height: 240px;
+          text-align: center;
+          padding: 0;
+          gap: 22px;
+          margin-right: 0%;
+        }
+        .showData li a {
+          text-decoration: solid;
+        }
+        .showData li a:hover {
+          background: none;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="sidebar">
+    <nav>
       <div class="logo">
-        <img src="../images/logo.png" alt="Logo" width="100vh" />
+        <a href="index.html"
+          ><img src="../images/logo.png" alt="logo" width="100vh"
+        /></a>
       </div>
+      <ul>
+        <li><a href="d.html" class="active">Dashboard</a></li>
+        <li><a href="#" onclick="showAnalytics()">Analytics</a></li>
+        <li><a href="#">Messages</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
 
-      <div class="sidebar-item">
-        <ul>
-          <li><a href="d.html" class="active">Dashboard</a></li>
-          <li><a href="#" onclick="showAnalytics()">Analytics</a></li>
-          <li><a href="#">Messages</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul>
-      </div>
-    </div>
-
+     </div>
     <div class="content">
       <h2>Welcome to Rentflex Dashboard</h2>
       <div class="dashboard-box">
@@ -174,7 +226,7 @@
               <td>wifi</td>
               <td>Market college bustop</td>
               <td>Room has two windows</td>
-             <td>08/05/2023</td>
+              <td>08/05/2023</td>
               <td></td>
             </tr>
             <tr>
@@ -189,7 +241,7 @@
               <td>wifi</td>
               <td>Market college bustop</td>
               <td>Room has two windows</td>
-             <td>08/05/2023</td>
+              <td>08/05/2023</td>
             </tr>
           </tbody>
         </table>
