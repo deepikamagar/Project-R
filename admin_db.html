@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Admin_dashboard-Rentflex </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--css link-->
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+
+    <style>
+        body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+      }
+      .b-heading,.s-heading
+      {
+        color: #883d1a;
+      }
+     
+      .logo {
+        margin-left: 20px;
+        border-radius: 5px;
+        padding: 5px;
+      }
+  
+      .icon {
+        align-items: center;
+        font-size: 26px;
+        color: #883d1a;
+        display: none;
+      }
+
+      .admin_nav {
+        display: flex;
+        background-color: burlywood;
+        justify-content: space-between;
+        
+        width: 100%;
+        height: 80px;
+        align-items: center;
+        flex-wrap: wrap;
+        position: sticky;
+        top: 0;
+        z-index: 10000;
+        cursor: pointer;
+      }
+      .admin_nav .admin_navlist {
+        display: flex;
+        align-items: center;
+      }
+    .admin_navlist .admin_navitem {
+        list-style: none;
+      }
+    .admin_navlist .admin_navitem a {
+        margin-right: 12px;
+        margin-inline: 20px;
+        color:#883d1a;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: solid;
+        padding: 8px 15px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+      .admin_nav .admin_navlist .admin_navitem a:hover {
+        color:white;
+       
+      }
+       
+
+      .dashboard-box {
+        width: 20%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 16px;
+        margin-top: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .dashboard-box h3 {
+        color: #883d1a;
+      }
+
+      .dashboard-box p {
+        margin: 0;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .content {
+     margin: 20px;
+        padding: 16px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .a-tb {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      .a-tb,
+      .a-heading,
+      .a-data {
+        border: 1px solid #ddd;
+      }
+
+      .a-heading,
+      .a-data {
+        padding: 12px;
+        text-align: center;
+      }
+
+      .a-heading {
+        background-color: burlywood;
+        color: #fff;
+      }
+      @media (max-width: 700px) {
+        .dashboard-box {
+          width: 50%;
+        }
+      }
+      /*--Responsive navbar--
+      @media only screen and (max-width: 700px) {
+        nav ul {
+          display: none;
+        }
+        .icon {
+          display: flex;
+          cursor: pointer;
+          margin-right: 15px;
+        }
+        .showData {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 80px;
+          background-color: rgb(247, 217, 178);
+          width: 100%;
+          height: 240px;
+          text-align: center;
+          padding: 0;
+          gap: 22px;
+          margin-right: 0%;
+        }
+        .showData li a {
+          text-decoration: solid;
+        }
+        .showData li a:hover {
+          background: none;
+        }
+      }*/
+    </style>
+  </head>
+  <body>
+    <nav class="admin_nav">
+      <div class="logo">
+        <a href="index.html"
+          ><img src="../images/logo.png" alt="logo" width="100vh"
+        /></a>
+      </div>
+      <ul class="admin_navlist">
+        <li class="admin_navitem" ><a href="admin_db.html" class="active">Dashboard</a></li>
+        <li class="admin_navitem"><a href="#" onclick="showAnalytics()">Analytics</a></li>
+        <li class="admin_navitem"><a href="#">Messages</a></li>
+        <li class="admin_navitem"><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+
+     </div>
+    <div class="content">
+      <h2 class="b-heading">Welcome to Rentflex Dashboard</h2>
+      <div class="dashboard-box">
+        <h3 class="s-heading">Total Users</h3>
+        <p class="num">100</p>
+      </div>
+
+      <div class="dashboard-box">
+        <h3 class="s-heading">Total Room Listings</h3>
+        <p class="num">35</p>
+      </div>
+
+      <div id="analytics-table" class="hidden">
+        <h3 class="s-heading">Analytics of Room listing</h3>
+        <table class="a-tb">
+          <thead>
+            <tr class="a-row">
+              <th class="a-heading">User ID</th>
+              <th class="a-heading">Room Title</th>
+              <th class="a-heading">Price</th>
+              <th class="a-heading">Price Negotiable</th>
+              <th class="a-heading">Room Area</th>
+              <th class="a-heading">Room Type</th>
+              <th class="a-heading">Room Photo</th>
+              <th class="a-heading">Add more photos</th>
+              <th class="a-heading">Room Facilities</th>
+              <th class="a-heading">Local area Facilities</th>
+              <th class="a-heading">Additional Details</th>
+              <th class="a-heading">Contact Number</th>
+              <th class="a-heading">Added Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Analytics data  -->
+            <tr class="a-row">
+              <td class="a-data">User123</td>
+              <td class="a-data">Room 1</td>
+              <td class="a-data">Rs.5000</td>
+              <td class="a-data">No</td>
+              <td class="a-data">250sq.ft</td>
+              <td class="a-data">Medium</td>
+              <td class="a-data"><img src="user1.jpg" alt="User Photo" width="30" /></td>
+              <td class="a-data"><img src="user2.jpg" alt="User Photo" width="30" /></td>
+              <td class="a-data">wifi</td>
+              <td class="a-data">Market college bustop</td>
+              <td class="a-data">Room has two windows</td>
+              <td class="a-data">08/05/2023</td>
+              <td class="a-data"></td>
+            </tr>
+            <tr class="a-row">
+              <td class="a-data">User123</td>
+              <td class="a-data">Room 1</td>
+              <td class="a-data">Rs.5000</td>
+              <td class="a-data">No</td>
+              <td class="a-data">250sq.ft</td>
+              <td class="a-data">Medium</td>
+              <td class="a-data"><img src="user1.jpg" alt="User Photo" width="30" /></td>
+              <td class="a-data"><img src="user2.jpg" alt="User Photo" width="30" /></td>
+              <td class="a-data">wifi</td>
+              <td class="a-data">Market college bustop</td>
+              <td class="a-data">Room has two windows</td>
+              <td class="a-data">08/05/2023</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      function showAnalytics() {
+        const analyticsTable = document.getElementById("analytics-table");
+        const dashboardBoxes = document.querySelectorAll(".dashboard-box");
+
+        analyticsTable.classList.toggle("hidden");
+
+        dashboardBoxes.forEach((box) => {
+          box.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>
